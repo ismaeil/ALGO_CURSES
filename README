@@ -1,1 +1,7 @@
-Vesrion with curses
+Vesrion curses
+
+Documentation : /DOCS/_build/html/index.html
+
+Coverage tests : /htmlcov/index.html
+
+Run Tests : sh tests_all.sh

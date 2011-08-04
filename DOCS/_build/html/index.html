@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Table de matières &mdash; Documentation de l&#39;Algorithme (CURSES VERSION)</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Documentation de l&#39;Algorithme (CURSES VERSION)" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="#">Documentation de l&#39;Algorithme (CURSES VERSION)</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Table de matières</a></li>
+<li><a class="reference internal" href="#quick-start">Quick start</a></li>
+<li><a class="reference internal" href="#touches-clavier">Touches Clavier</a></li>
+<li><a class="reference internal" href="#module-ordonancement">Documentation</a></li>
+</ul>
+
+  <h3>Cette page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Montrer la source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<div class="section" id="table-de-matieres">
+<h1>Table de matières<a class="headerlink" href="#table-de-matieres" title="Lien permanent vers ce titre">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Index du module</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Page de recherche</em></a></li>
+</ul>
+</div>
+<div class="section" id="quick-start">
+<h1>Quick start<a class="headerlink" href="#quick-start" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Version CURSES de l&#8217;algorithme de réordonnancement d&#8217;une table 0/1</p>
+<ol class="arabic">
+<li><p class="first">On commence par préciser la table qu&#8217;on veut dans le fichier <em>curses_version.py</em> (ligne 114):</p>
+<blockquote>
+<div><ul>
+<li><p class="first">On indique pour celà les variables <em>table</em>, <em>labels_lignes</em>, <em>labels_colonnes</em></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">table</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+<span class="n">labels_lignes</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;ligne0&quot;</span><span class="p">,</span> <span class="s">&quot;ligne1&quot;</span><span class="p">,</span> <span class="s">&quot;ligne2&quot;</span><span class="p">]</span>
+<span class="n">labels_colonnes</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;col1&quot;</span><span class="p">,</span> <span class="s">&quot;col2&quot;</span><span class="p">,</span> <span class="s">&quot;col3&quot;</span><span class="p">,</span> <span class="s">&quot;col4&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Ou encore on importe une table depuis un fichier texte</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">table</span><span class="p">,</span> <span class="n">labels_lignes</span><span class="p">,</span> <span class="n">labels_colonnes</span> <span class="o">=</span>  <span class="n">imporTable_generique</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&#39;./Examples/table_10_20.txt&#39;</span><span class="p">),</span> <span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Puis on exécute le script <em>curses_version.py</em></p>
+<div class="highlight-python"><pre>python curses_version.py</pre>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="touches-clavier">
+<h1>Touches Clavier<a class="headerlink" href="#touches-clavier" title="Lien permanent vers ce titre">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Touche</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Espace</td>
+<td>Choix de la ligne</td>
+</tr>
+<tr><td>i</td>
+<td>Déplacement en haut parmi les lignes autorisées</td>
+</tr>
+<tr><td>k</td>
+<td>Déplacement en bas parmi les lignes autorisées</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-ordonancement">
+<span id="documentation"></span><h1>Documentation<a class="headerlink" href="#module-ordonancement" title="Lien permanent vers ce titre">¶</a></h1>
+<span class="target" id="module-import_export"></span><dl class="function">
+<dt id="import_export.creerTable">
+<tt class="descclassname">import_export.</tt><tt class="descname">creerTable</tt><big>(</big><em>nb_l</em>, <em>nb_c</em><big>)</big><a class="headerlink" href="#import_export.creerTable" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Créer une table aléatoire à partir qui a nb_l lignes et nb_c colonnes.</p>
+<p>Exemple :</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">table</span> <span class="o">=</span> <span class="n">creerTable</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">table</span>
+
+<span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="import_export.imporTable">
+<tt class="descclassname">import_export.</tt><tt class="descname">imporTable</tt><big>(</big><em>fichier</em><big>)</big><a class="headerlink" href="#import_export.imporTable" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Importer un fichier et construire la table correspondant</p>
+<p><strong>Cette méthode stipule que le fichier ne contient pas les labels, ce dernier cas est
+géré dans la méthode imporTable_generique</strong></p>
+<p>Exemple:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;Examples/table1.txt&#39;</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">imporTable</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">t</span>
+
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="import_export.imporTable_generique">
+<tt class="descclassname">import_export.</tt><tt class="descname">imporTable_generique</tt><big>(</big><em>fichier</em>, <em>label_lignes=False</em>, <em>label_colonnes=False</em><big>)</big><a class="headerlink" href="#import_export.imporTable_generique" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fonction très proche de la fonction <em>imporTable_generique</em> du code avec No curses</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="import_export.tabletoliststr">
+<tt class="descclassname">import_export.</tt><tt class="descname">tabletoliststr</tt><big>(</big><em>table</em><big>)</big><a class="headerlink" href="#import_export.tabletoliststr" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Lecture en ligne de la table</p>
+<p>Résultat = liste de lignes en chaînes de caractères</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr><td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr><td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>se transforme en :</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="s">&quot;1 1 0&quot;</span><span class="p">,</span> <span class="s">&quot;0 1 0&quot;</span><span class="p">,</span> <span class="s">&quot;1 1 1&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="import_export.tabletostr">
+<tt class="descclassname">import_export.</tt><tt class="descname">tabletostr</tt><big>(</big><em>table</em>, <em>label_ligne</em>, <em>label_colonne</em>, <em>ordre_ligne</em>, <em>ordre_colonne</em><big>)</big><a class="headerlink" href="#import_export.tabletostr" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>À partir d&#8217;une table avec ou pas des labels, on procède à la lecture de la table et on crée une chaîne de
+caractères qui fait que l&#8217;affichage en est rendu facile.</p>
+<p><em>ordre_ligne</em> et <em>ordre_colonne</em> permettent de créer un découpage en lignes et colonnes</p>
+<p>Cette fonction ne sert qu&#8217;à la visualisation d&#8217;une table.</p>
+<p>Le <em>return</em> peut tout  à fait être remplacé par un <em>print</em>.</p>
+<p>EXEMPLE :</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">table</span><span class="p">,</span> <span class="n">label_ligne</span><span class="p">,</span> <span class="n">label_colonne</span> <span class="o">=</span> <span class="n">imporTable_generique</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&#39;Examples/table_7_10.txt&#39;</span><span class="p">),</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+
+<span class="n">ordre_ligne</span> <span class="o">=</span> <span class="p">[</span><span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])]</span>
+
+<span class="n">ordre_colonne</span> <span class="o">=</span> <span class="p">[</span><span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">tabletostr</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">label_ligne</span><span class="p">,</span> <span class="n">label_colonne</span><span class="p">,</span> <span class="n">ordre_ligne</span><span class="p">,</span> <span class="n">ordre_colonne</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<span class="target" id="module-utils"></span><dl class="function">
+<dt id="utils.choixPivot">
+<tt class="descclassname">utils.</tt><tt class="descname">choixPivot</tt><big>(</big><em>table</em>, <em>ensemble_ligne</em>, <em>ensemble_colonne</em><big>)</big><a class="headerlink" href="#utils.choixPivot" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>On entend par pivot la ligne qui a le plus grand poid</p>
+<p>Exemple :</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr><td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr><td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr><td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>qui est</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">t</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>on a</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">choixPivot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span> <span class="o">=</span> <span class="mi">1</span> 
+</pre></div>
+</div>
+<p>car le poid de la ligne 1 est (selon les colonnes : set([0, 1, 2, 3, 4, 5])) cinq et est supérieur ou égal au poid des autres lignes. 
+le choix du pivot est fait parmi les lignes autorisées et les colonnes autorisées</p>
+<p>Retourner la ligne pivot et l&#8217;ensemble des colonnes où elle a des 1</p>
+<p><strong>ATTENTION :</strong></p>
+<blockquote>
+<div><p><strong>cette méthode donne bien un élèment maximal, mais elle ne tient pas compte des autres
+élèments maximaux qui n&#8217;ont pas un poid maximal (ceci est par contre le cas dans le 
+code de la méthode avec curses)</strong></p>
+<p><strong>Par exemple, dans la table suivante :</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr><td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>les deux lignes sont maximales (aucune n&#8217;est incluse dans l&#8217;autre) même si la première a plus de 
+poid que la seconde.
+La méthode actuelle ne tient pas compte de ce fait !</strong></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.colonnes_element">
+<tt class="descclassname">utils.</tt><tt class="descname">colonnes_element</tt><big>(</big><em>pivot</em>, <em>colonnes_autorisees</em>, <em>T</em><big>)</big><a class="headerlink" href="#utils.colonnes_element" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fonction auxiliaire qui retournes parmis les colonnes autorisés, celles qui contiennent un 1 sur la ligne pivot</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.customap">
+<tt class="descclassname">utils.</tt><tt class="descname">customap</tt><big>(</big><em>liste</em><big>)</big><a class="headerlink" href="#utils.customap" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>À partir de :</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])]</span>
+</pre></div>
+</div>
+<p>Retourner :</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="nb">set</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.decoupage">
+<tt class="descclassname">utils.</tt><tt class="descname">decoupage</tt><big>(</big><em>pivot</em>, <em>indice_ligne</em>, <em>indice_colonne</em>, <em>L</em>, <em>C</em>, <em>T</em><big>)</big><a class="headerlink" href="#utils.decoupage" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>À partir de pivot indice_colonne, indice_ligne, L (liste d&#8217;ensemble), C (liste d&#8217;ensemble) et la 
+table ; retourner c0, c1, l0, l1 (ensembles)</p>
+<blockquote>
+<div><p>Cette méthode est très proche de la méthode <em>decoupage</em> utilisée dans la version non cureses de l&#8217;algorithme.</p>
+<p>Le prototype de la fonction change tout de même entre les deux versions (Curses et Non Curses)</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.entasserLigne">
+<tt class="descclassname">utils.</tt><tt class="descname">entasserLigne</tt><big>(</big><em>table</em>, <em>ligne</em>, <em>colonnes_autorisees</em><big>)</big><a class="headerlink" href="#utils.entasserLigne" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Entasser une ligne selon un ensemble de colonnes revient à mettre tous ses 1 à droite et ses zero 
+à gauche en changeant ainsi l&#8217;ordre des colonnes autorisées.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.goodListe">
+<tt class="descclassname">utils.</tt><tt class="descname">goodListe</tt><big>(</big><em>liste</em><big>)</big><a class="headerlink" href="#utils.goodListe" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Transforme une liste d&#8217;ensembles (éventuellement vides) en en liste d&#8217;entiers</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="nb">set</span><span class="p">([]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">4</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">set</span><span class="p">([]),</span> <span class="nb">set</span><span class="p">([]),</span> <span class="nb">set</span><span class="p">([</span><span class="mi">2</span><span class="p">])]</span>
+</pre></div>
+</div>
+<p>se transforme en</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.maj">
+<tt class="descclassname">utils.</tt><tt class="descname">maj</tt><big>(</big><em>pos_c</em>, <em>pos_l</em>, <em>L</em>, <em>C</em>, <em>c0</em>, <em>c1</em>, <em>l0</em>, <em>l1</em><big>)</big><a class="headerlink" href="#utils.maj" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Méthode auxiliaire pour le programme principal
+Elle fait des mises à jour de variables intermédiaires.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.nouvelOrdre">
+<tt class="descclassname">utils.</tt><tt class="descname">nouvelOrdre</tt><big>(</big><em>table</em>, <em>liste</em><big>)</big><a class="headerlink" href="#utils.nouvelOrdre" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Réordonner les colonnes suivant la liste en tant qu&#8217;index</p>
+<p>Exemple :</p>
+<blockquote>
+<div><p>Le résultat du réordonnancement de</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>suivant la table</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>est</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.reorderLC">
+<tt class="descclassname">utils.</tt><tt class="descname">reorderLC</tt><big>(</big><em>table</em>, <em>ordrel</em>, <em>ordrec</em><big>)</big><a class="headerlink" href="#utils.reorderLC" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>On donne la table, un ordre sur les lignes et sur les colonnes et on réordonne !
+entrée : liste de listes + ordre ligne + ordre colonne
+sortie : liste de listes (ordonnée)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.reorderTab">
+<tt class="descclassname">utils.</tt><tt class="descname">reorderTab</tt><big>(</big><em>table</em><big>)</big><a class="headerlink" href="#utils.reorderTab" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Ordonner la table itérativement.
+On a besoin de deux listes intermédiaires L(n+1) et L(n). on les appellera LL et L
+La sortie est une liste d&#8217;ordre
+cette méthode ne travaille que sur les colonnes de la table et ne change pas l&#8217;ordre des lignes.</p>
+<blockquote>
+<div><strong>Dans une table &#8220;démontable&#8221;, les lignes doivent être ordonnées dans un ordre de démontabilité du treillis associé pour que 
+cette méthode puisse créer une table ordonnée (ie : sans configuration Gamma)</strong></div></blockquote>
+<p>Exemple :</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr><td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr><td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>se transforme en :</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr><td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr><td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.transposeData">
+<tt class="descclassname">utils.</tt><tt class="descname">transposeData</tt><big>(</big><em>listedelistes</em><big>)</big><a class="headerlink" href="#utils.transposeData" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>L&#8217;entrée est la liste des colonnes et la sortie est la liste des lignes</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">entree</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">],[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">]]</span>
+
+<span class="n">sortie</span> <span class="o">=</span> <span class="n">transposeData</span><span class="p">(</span><span class="n">entree</span><span class="p">)</span>
+
+<span class="n">sortie</span>
+
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">24</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="#">Documentation de l&#39;Algorithme (CURSES VERSION)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Ismaeil Abouljamal.
+      Créé avec <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
